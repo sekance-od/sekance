@@ -1,11 +1,20 @@
 import React from 'react'
-import { HomeView } from './views'
+import { HomeView, ProfilePageView, MarketView } from './views'
+import {BrowserRouter, Route, Routes } from 'react-router-dom';
+
+
 
 function App() {
   return (
-    <div>
-      <HomeView />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<HomeView />} />
+        <Route path="/homeview" element={<HomeView />} />
+        <Route path="/marketview" element={<MarketView />} />
+        <Route path="profilepageview/*" element={<ProfilePageView />} />
+      </Routes>
+    </BrowserRouter>
+
   )
 }
 

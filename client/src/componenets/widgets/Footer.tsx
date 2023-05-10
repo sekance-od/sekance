@@ -8,8 +8,8 @@ import { colorPalette } from '../../constants'
 
 const Footer = () => {
   return (
-    <footer className="bg-white dark:bg-slate-800">
-      <div className="mx-auto w-full  p-4 py-6 lg:py-8">
+    <footer className="bg-slate-800 dark:bg-slate-800">
+      <div className="mx-auto w-full   py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
             <a href="https://runoyazilimmedya.com/" className="flex items-center">
@@ -70,8 +70,8 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <div className="sm:flex sm:items-center sm:justify-between">
+        <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8 px-2" />
+        <div className="sm:flex sm:items-center sm:justify-between px-8">
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
             © 2023{' '}
             <a href="https://runoyazilimmedya.com/" className="hover:underline">

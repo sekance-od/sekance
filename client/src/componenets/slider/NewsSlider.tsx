@@ -27,7 +27,7 @@ const NewsSlider = () => {
       </div> */}
 
       <div className="relative flex overflow-x-hidden">
-        <div className="py-2 animate-marquee whitespace-nowrap">
+        <div className="py-2 animate-marquee whitespace-nowrap ">
           <span className="text-4xl mx-4 font-bold text-lg">AME : 12 USDTR</span>
           <span className="text-4xl mx-4 font-bold text-lg">TUR : 40 USDTR</span>
           <span className="text-4xl mx-4 font-bold text-lg">ING : 10 USDTR</span>

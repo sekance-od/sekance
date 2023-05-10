@@ -1,0 +1,1 @@
+export { default as FilterableDatatable } from './FilterableDatatable'

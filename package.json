@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "react-google-maps": "^9.4.5",
+    "react-image": "^4.1.0",
+    "react-simple-maps": "^3.0.0"
+  }
+}

@@ -9,7 +9,8 @@ const Layout: React.FC<IProps> = ({ children }) => {
   return (
     <div className="h-screen">
       <Header />
-      <main className="h-[calc(100%-105px-300px)]">{children}</main>
+      {/* <main className="h-[calc(100%-105px-300px)]">{children}</main> */}
+        <main>{children}</main>
       <Footer />
     </div>
   )
