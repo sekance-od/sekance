@@ -9,7 +9,7 @@ import { colorPalette } from '../../constants'
 const Footer = () => {
   return (
     <footer className="bg-slate-800 dark:bg-slate-800">
-      <div className="mx-auto w-full   py-6 lg:py-8">
+      <div className="mx-auto w-full px-6  py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
             <a href="https://runoyazilimmedya.com/" className="flex items-center">
@@ -33,7 +33,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div>
+            <div className="px-8">
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
               <ul className="text-gray-600 dark:text-gray-400 font-medium">
                 <li className="mb-4">
