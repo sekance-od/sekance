@@ -12,7 +12,7 @@ import { Markets } from '../componenets/markets'
 const MarketView = () => {
     return (
        <Layout>
-            <div className="bg-slate-300 h-full">
+            <div className="h-full">
                 <div className="flex h-2/3">
                    <div className="w-1/3 p-2"><Markets/></div>
                    <div className="w-1/3 p-2"><Markets/></div>

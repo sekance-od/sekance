@@ -9,11 +9,11 @@ import { ProfileBody } from '../componenets/profilebody'
 const ProfilePageView = () => {
     return (
        <Layout>
-            <div className="bg-slate-300 h-full">
+            <div className=" h-full">
                 <div className="flex ">
                    <div className="w-full p-2"><ProfileHeader/></div>
                 </div>
-                <div className="flex ">
+                <div className="flex">
                    <div className="w-full p-2"><ProfileBody/></div>
                 </div>
             </div>
