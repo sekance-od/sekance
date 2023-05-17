@@ -13,12 +13,12 @@ const MarketView = () => {
     return (
        <Layout>
             <div className="h-full">
-                <div className="flex h-2/3">
+                <div className="flex ">
                    <div className="w-1/3 p-2"><Markets/></div>
                    <div className="w-1/3 p-2"><Markets/></div>
                    <div className="w-1/3 p-2"><News/></div>
                 </div>
-                <div className="flex h-1/3">
+                <div className="flex ">
                    <div className="w-full p-2"><FilterableDatatable/></div>
                 </div>
             </div>

@@ -14,8 +14,6 @@ import { Orders } from '../componenets/orders'
 const HomeView = () => {
   return (
     <Layout>
-      
-
      <div className="h-full">
         <div className="flex ">
           <div className="w-2/3 p-4"><Map/></div>
@@ -27,13 +25,9 @@ const HomeView = () => {
         </div>
       </div>
 
-        <div className="flex h-1/6 max-w-lg">
+      <div className="flex h-1/6 max-w-lg">
           <NewsSlider/> 
-        </div>
-
-     
-      
-
+      </div>
     </Layout>
   )
 }

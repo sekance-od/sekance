@@ -16,7 +16,7 @@ const Header = () => {
         <p className="text-white font-medium hover:font-bold  mx-2"><Link to="/homeview">Home</Link></p>
         <p className="text-white font-medium hover:font-bold mx-2"><Link to="/marketview">Piyasalar</Link></p>
         <p className="text-white font-medium hover:font-bold mx-2"><Link to="/profilepageview">Profile</Link></p>
-        <p className="text-white font-medium hover:font-bold mx-2">Blog<Link to="">Contact</Link></p> 
+        <p className="text-white font-medium hover:font-bold mx-2"><Link to="/walletview">Cüzdan</Link></p> 
        
       </div>
       <div className="flex h-full items-center justify-center rounded-full">
