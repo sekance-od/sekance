@@ -1,19 +1,67 @@
+const dataAccess = require('../data-access')
+const { StatusCodes } = require('http-status-codes')
+
 // CRUD
 
-const getUserById = async (req, res) => {
-  const { userId } = req.params
-
-  const user = await User.findById(userId)
-
-  return user
+const createUser = async (req, res) => {
+  const { body } = req
+  try {
+    await dataAccess.userDataAccess.createUser(body)
+    res.sendStatus(StatusCodes.CREATED)
+  } catch (e) {
+    console.log(e)
+    res.sendStatus(StatusCodes.INTERNAL_SERVER_ERROR)
+  }
 }
 
-const getUserTokens = async (req, res) => {
-  const { userId } = req.params
+const getUsers = async (req, res) => {
+  const { search, size, status } = req.query
+  try {
+    const users = await dataAccess.userDataAccess.findUserWithFiltersAndPopulate(req.query)
+    res.status(StatusCodes.OK).json(users)
+  } catch (e) {
+    console.log(e)
+    res.sendStatus(StatusCodes.INTERNAL_SERVER_ERROR)
+  }
+}
 
-  const user = await User.findById(userId)
+const updateUser = async (req, res) => {
+  const { _id, ...data } = req.body
+  try {
+    await dataAccess.userDataAccess.findByIdAndUpdateUser(_id ? _id : req.params.id, data)
+    res.sendStatus(StatusCodes.OK)
+  } catch (e) {
+    console.log(e)
+    res.sendStatus(StatusCodes.INTERNAL_SERVER_ERROR)
+  }
+}
 
-  const tokens = await Token.find({ user: userId })
+const getUser = async (req, res) => {
+  const { id } = req.params
+  try {
+    const user = await dataAccess.userDataAccess.findUserById(id, 'role')
+    let workingSchedule = await dataAccess.workingScheduleDataAccess.findWorkingScheduleByUserIdOrDefault(id)
+    res.status(StatusCodes.OK).json({ ...user, workingSchedule })
+  } catch (e) {
+    console.log(e)
+    res.sendStatus(StatusCodes.INTERNAL_SERVER_ERROR)
+  }
+}
 
-  return user
+const removeUser = async (req, res) => {
+  const { id } = req.params
+  try {
+    await dataAccess.userDataAccess.findByIdAndUpdateUser(id, { status: STATUS_TYPES.INACTIVE })
+    res.sendStatus(StatusCodes.OK)
+  } catch (e) {
+    console.log(e)
+    res.sendStatus(StatusCodes.INTERNAL_SERVER_ERROR)
+  }
+}
+
+module.exports = {
+  createUser,
+  getUsers,
+  getUser,
+  updateUser
 }

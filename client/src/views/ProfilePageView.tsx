@@ -1,24 +1,25 @@
 import React from 'react'
 import Layout from './Layout'
 // icons
-import { FilterableDatatable } from '../componenets/filterabledatatable'
-import { Markets } from '../componenets/markets'
-import { ProfileHeader } from '../componenets/profileheader'
-import { ProfileBody } from '../componenets/profilebody'
+import { ProfileHeader, ProfileBody, FilterableDatatable, Markets } from '../componenets'
 
 const ProfilePageView = () => {
-    return (
-       <Layout>
-            <div className=" h-full">
-                <div className="flex ">
-                   <div className="w-full p-2"><ProfileHeader/></div>
-                </div>
-                <div className="flex">
-                   <div className="w-full p-2"><ProfileBody/></div>
-                </div>
-            </div>
-       </Layout>
-    );
+  return (
+    <Layout>
+      <div className=" h-full">
+        <div className="flex ">
+          <div className="w-full p-2">
+            <ProfileHeader />
+          </div>
+        </div>
+        <div className="flex">
+          <div className="w-full p-2">
+            <ProfileBody />
+          </div>
+        </div>
+      </div>
+    </Layout>
+  )
 }
 
 export default ProfilePageView
