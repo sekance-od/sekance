@@ -1,3 +1,10 @@
+export * from './crypto-currencies'
+export * from './filterable-data-table'
+export * from './map'
+export * from './markets'
+export * from './news'
+export * from './profile'
+
 export * from './widgets'
 export * from './slider'
 export * from './map'
