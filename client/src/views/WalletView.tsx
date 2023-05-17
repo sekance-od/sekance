@@ -1,10 +1,9 @@
 import React from "react";
 import Layout from "./Layout";
 // icons
-import { FilterableDatatable } from "../componenets/filterabledatatable";
+import { FilterableDatatable } from "../componenets/filterable-data-table";
 import { Markets } from "../componenets/markets";
-import { ProfileHeader } from "../componenets/profileheader";
-import { ProfileBody } from "../componenets/profilebody";
+import { ProfileHeader,ProfileBody } from "../componenets/profile";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { icon } from '@fortawesome/fontawesome-svg-core/import.macro'
 
