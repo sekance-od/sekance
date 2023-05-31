@@ -1,11 +1,9 @@
-import React from "react";
-import Layout from "./Layout";
+import React from 'react'
+import Layout from './Layout'
 // icons
-import { FilterableDatatable } from "../componenets/filterable-data-table";
-import { Markets } from "../componenets/markets";
-import { ProfileHeader,ProfileBody } from "../componenets/profile";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { icon } from '@fortawesome/fontawesome-svg-core/import.macro'
+import { FilterableDatatable } from '../componenets/filterable-data-table'
+import { Markets } from '../componenets/markets'
+import { ProfileHeader, ProfileBody } from '../componenets/profile'
 
 const WalletView = () => {
   return (
@@ -26,16 +24,13 @@ const WalletView = () => {
                   </span>
                 </div>
                 <div className=" py-4 text-sm ">
-                  {" "}
+                  {' '}
                   <span className="dark-grey font-medium">USDT</span>
                   <span className="font-medium ml-2">6.8798</span>
                 </div>
                 <div className=" py-4 text-sm  green font-medium">+0.93%</div>
                 <button className="inline-flex items-center px-4 py-2 border border-transparent rounded-md font-semibold text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
                   <i className="fas fa-plus mr-2"></i>
-                  
-                  
-                  
                   <i className="fa fa-envelope-o" aria-hidden="true"></i>
                   Yeni Ekle
                 </button>
@@ -52,7 +47,7 @@ const WalletView = () => {
                   </span>
                 </div>
                 <div className=" py-4 text-sm ">
-                  {" "}
+                  {' '}
                   <span className="dark-grey font-medium">USDT</span>
                   <span className="font-medium ml-2">6.8798</span>
                 </div>
@@ -71,9 +66,7 @@ const WalletView = () => {
             <div className=" grid grid-cols-3 gap-4 justify-items-center">
               <div className=" p-1 text-sm  font-medium  dark-grey">Ad </div>
               <div className="p-1 text-sm font-medium dark-grey">Son Fiyat</div>
-              <div className=" p-1 text-sm font-medium dark-grey">
-                24 sa Değişim
-              </div>
+              <div className=" p-1 text-sm font-medium dark-grey">24 sa Değişim</div>
               {/* grid başlık */}
 
               <div className=" p-1 text-sm">
@@ -87,7 +80,7 @@ const WalletView = () => {
                 </span>
               </div>
               <div className=" p-1 text-sm">
-                {" "}
+                {' '}
                 <span className="dark-grey font-medium">USDT</span>
                 <span className="font-medium ml-2">6.8798</span>
               </div>
@@ -102,7 +95,7 @@ const WalletView = () => {
         </div>
       </div>
     </Layout>
-  );
-};
+  )
+}
 
-export default WalletView;
+export default WalletView

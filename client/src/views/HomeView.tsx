@@ -1,33 +1,33 @@
 import React from 'react'
+
 import Layout from './Layout'
-// icons
-import { IoMdWallet } from 'react-icons/io'
-import { BsDiscord } from 'react-icons/bs'
-import { HiOutlineSun } from 'react-icons/hi'
-import { colorPalette } from '../constants/palette'
-import { NewsSlider } from '../componenets'
-import { Map } from '../componenets'
-import { News } from '../componenets/news'
-import { Markets } from '../componenets/markets'
-import { Orders } from '../componenets/orders'
+// Components
+import { CurrencyChangesDT, CurrencyWorldMap, NewsActivty, PopularCurrenciesDT } from '../componenets'
 
 const HomeView = () => {
   return (
     <Layout>
-     <div className="h-full">
-        <div className="flex ">
-          <div className="w-2/3 p-4"><Map/></div>
-          <div className="w-1/3 p-4"><Markets/></div>
+      <div className="h-full">
+        <div className="flex  h-[400px]">
+          <div className="w-2/3 p-4">
+            <CurrencyWorldMap />
+          </div>
+          <div className="w-1/3 p-4">
+            <PopularCurrenciesDT />
+          </div>
         </div>
-          <div className="flex">
-          <div className="w-2/3 p-8"><Orders/></div>
-          <div className="w-1/3 p-4"><News/></div>
+        <div className="flex">
+          <div className="flex w-2/3 p-8">
+            <CurrencyChangesDT tableTitle="Highest Currencies" currencyData={[]} />
+            <CurrencyChangesDT tableTitle="Latest Currencies" currencyData={[]} />
+          </div>
+          <div className="w-1/3 p-4">
+            <NewsActivty />
+          </div>
         </div>
       </div>
 
-      <div className="flex h-1/6 max-w-lg">
-          <NewsSlider/> 
-      </div>
+      <div className="flex h-1/6 max-w-lg">{/* <NewsSlider /> */}</div>
     </Layout>
   )
 }
