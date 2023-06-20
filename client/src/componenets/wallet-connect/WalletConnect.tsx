@@ -11,7 +11,7 @@ const WalletConnect = () => {
   const [account, setAccount] = useState<string | null>(null)
   const [balance, setBalance] = useState<string | null>(null)
 
-  console.log('balance', balance)
+  console.log('balance', account)
 
   useEffect(() => {
     if ((window as any).ethereum) {

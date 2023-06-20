@@ -18,7 +18,7 @@ const main = async () => {
     // Mongo Connection
     await mongoose.connect(URI, {
       useNewUrlParser: true,
-      useUnifiedTopology: true,
+      useUnifiedTopology: true
     })
     console.log('Connected to MongoDB')
   } catch (err) {
@@ -38,8 +38,8 @@ const main = async () => {
       crossOriginOpenerPolicy: { policy: 'same-origin-allow-popups' },
       originAgentCluster: true,
       referrerPolicy: {
-        policy: 'no-referrer-when-downgrade',
-      },
+        policy: 'no-referrer-when-downgrade'
+      }
     })
   )
 
@@ -50,8 +50,8 @@ const main = async () => {
         'img-src': ["'self'", 'https: data: blob:'],
         'default-src': ["'self'", 'https://*'],
         'connect-src': ["'self'", 'https://*', 'wss://*', 'data: blob:'],
-        'script-src': ["'self'", 'https: data: blob: https://*'],
-      },
+        'script-src': ["'self'", 'https: data: blob: https://*']
+      }
     })
   )
 
@@ -69,17 +69,17 @@ const main = async () => {
     res.sendStatus(err.status || 500)
   })
 
-  process.on('unhandledRejection', (error) => {
+  process.on('unhandledRejection', error => {
     console.log('unhandledRejection', error)
   })
 
-  process.on('uncaughtException', (error) => {
+  process.on('uncaughtException', error => {
     console.log('uncaughtException', error)
   })
 
   app.use(
     express.urlencoded({
-      extended: true,
+      extended: true
     })
   )
 
